@@ -7,7 +7,7 @@ const existGrade = async (req, res = response, next) => {
     const grade = await Grade.findById(id)
     if (!grade) {
         return res.status(400).json({
-            errors: [{ msg: `El grado seleccionado no existe` }]
+            errors: [{ msg: `El grado seleccionado no existe, seleccione otro` }]
         })
     }
 
